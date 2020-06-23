@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <!--Navbar for the top of the page-->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Weather Dashboard</a>
+    </nav>
+
+    <!--webpage content will be stored here-->
+    <main class = "container">
+
+      <!--create a main container for the two columns-->
+      <section class = "row">
+
+        <!--search form with past searched cities underneath-->
+        <article class = "col-4">
+          <form class="form-inline">
+
+            <!--the form has a label-->
+            <label class="sr-only" for="search city">City</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="searchcityformtext" placeholder="City Name">
+            <button type="submit" class="btn btn-light mb-2">Search</button>
+          </form>
+
+        </article>
+
+        <!--column for the weather information is created here-->
+        <article class = "col-8">
+
+          <!--most recent search city current weather-->
+          <div class="card" id="currentCityWeatherCard">
+            <div class="card-body">
+              <h5 class="card-title" id = "currentCityName">City Name</h5>
+              <p class="card-text" id = "currentCityTemp">Temperature:</p>
+              <p class="card-text" id = "currentCityHumidity">Humidity:</p>
+              <p class="card-text" id = "currentCityWindSpeed">Wind Speed:</p>
+              <p class="card-text" id = "currentCityTemp">UV Index:</p>
+
+            </div>
+          </div>
+
+          
+
+            <div class="card" id="fiveDayForecast">
+              <div class="card-body">
+                <h5 class="card-title">5 Day Forecast</h5>
+
+                <div class = "row">
+  
+                <div class="card bg-light col" >
+                  <div class="card-body">
+                    <h5 class="card-title">Day 1</h5>
+                    <p class="card-text" id = "dayOneTemp">Temp:</p>
+                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                  </div>
+                </div>
+  
+                <div class="card bg-light col" >
+                  <div class="card-body">
+                    <h5 class="card-title">Day 2</h5>
+                    <p class="card-text" id = "dayOneTemp">Temp:</p>
+                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                  </div>
+                </div>
+  
+                <div class="card bg-light col" >
+                  <div class="card-body">
+                    <h5 class="card-title">Day 3</h5>
+                    <p class="card-text" id = "dayOneTemp">Temp:</p>
+                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                  </div>
+                </div>
+  
+                <div class="card bg-light col" >
+                  <div class="card-body">
+                    <h5 class="card-title">Day 4</h5>
+                    <p class="card-text" id = "dayOneTemp">Temp:</p>
+                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                  </div>
+                </div>
+  
+                <div class="card bg-light col" >
+                  <div class="card-body">
+                    <h5 class="card-title">Day 5</h5>
+                    <p class="card-text" id = "dayOneTemp">Temp:</p>
+                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+
+
+
+        </article>
+      </section>
+    </main>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
