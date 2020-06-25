@@ -25,13 +25,20 @@
 
         <!--search form with past searched cities underneath-->
         <article class = "col-4">
-          <form class="form-inline">
+          <form class="form-inline" id="searchcityform">
 
             <!--the form has a label-->
             <label class="sr-only" for="search city">City</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="searchcityformtext" placeholder="City Name">
+            <input type="text" class="form-control mb-2 mr-sm-2" placeholder="City Name">
             <button type="submit" class="btn btn-light mb-2">Search</button>
           </form>
+
+          <!--Past Searched cities will appear here-->
+          <div class="card bg-light mb-3" style="max-width: 100%; margin-top: 15px">
+            <div class="card-header">History</div>
+            <div class="card-body" id= "citySearchHistory">
+            </div>
+          </div>
 
         </article>
 
@@ -45,7 +52,7 @@
               <p class="card-text" id = "currentCityTemp">Temperature:</p>
               <p class="card-text" id = "currentCityHumidity">Humidity:</p>
               <p class="card-text" id = "currentCityWindSpeed">Wind Speed:</p>
-              <p class="card-text" id = "currentCityTemp">UV Index:</p>
+              <p class="card-text" id = "currentCityUV" >UV Index:</p>
 
             </div>
           </div>
@@ -60,7 +67,7 @@
   
                 <div class="card bg-light col" >
                   <div class="card-body">
-                    <h5 class="card-title">Day 1</h5>
+                    <h5 class="card-title" id = "dayOne">Tomorrow</h5>
                     <p class="card-text" id = "dayOneTemp">Temp:</p>
                     <p class="card-text" id = "dayOneHumidity">Humidity:</p>
                   </div>
@@ -68,33 +75,33 @@
   
                 <div class="card bg-light col" >
                   <div class="card-body">
-                    <h5 class="card-title">Day 2</h5>
-                    <p class="card-text" id = "dayOneTemp">Temp:</p>
-                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                    <h5 class="card-title" id = "dayTwo">Day 2</h5>
+                    <p class="card-text" id = "dayTwoTemp">Temp:</p>
+                    <p class="card-text" id = "dayTwoHumidity">Humidity:</p>
                   </div>
                 </div>
   
                 <div class="card bg-light col" >
                   <div class="card-body">
-                    <h5 class="card-title">Day 3</h5>
-                    <p class="card-text" id = "dayOneTemp">Temp:</p>
-                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                    <h5 class="card-title" id = "dayThree">Day 3</h5>
+                    <p class="card-text" id = "dayThreeTemp">Temp:</p>
+                    <p class="card-text" id = "dayThreeHumidity">Humidity:</p>
                   </div>
                 </div>
   
                 <div class="card bg-light col" >
                   <div class="card-body">
-                    <h5 class="card-title">Day 4</h5>
-                    <p class="card-text" id = "dayOneTemp">Temp:</p>
-                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                    <h5 class="card-title" id = "dayFour">Day 4</h5>
+                    <p class="card-text" id = "dayFourTemp">Temp:</p>
+                    <p class="card-text" id = "dayFourHumidity">Humidity:</p>
                   </div>
                 </div>
   
                 <div class="card bg-light col" >
                   <div class="card-body">
-                    <h5 class="card-title">Day 5</h5>
-                    <p class="card-text" id = "dayOneTemp">Temp:</p>
-                    <p class="card-text" id = "dayOneHumidity">Humidity:</p>
+                    <h5 class="card-title" id = "dayFive">Day 5</h5>
+                    <p class="card-text" id = "dayFiveTemp">Temp:</p>
+                    <p class="card-text" id = "dayFiveHumidity">Humidity:</p>
                   </div>
                 </div>
   
@@ -108,6 +115,7 @@
       </section>
     </main>
     
+    <script src="lib/moment/moment.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

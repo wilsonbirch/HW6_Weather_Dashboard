@@ -9,3 +9,15 @@
 #currentCityWeatherCard{
     margin-bottom: 15px;
 }
+
+#dayOne, #dayTwo, #dayThree, #dayFour, #dayFive {
+    font-size: medium;
+}
+
+#dayOneTemp, #dayTwoTemp, #dayThreeTemp, #dayFourTemp, #dayFiveTemp {
+    font-size: small;
+}
+
+#dayOneHumidity, #dayTwoHumidity, #dayThreeHumidity, #dayFourHumidity, #dayFiveHumidity {
+    font-size: small;
+}
