@@ -1,6 +1,6 @@
 //pull last search city and display weatehr data
 var searchCity = localStorage.getItem("lastSearch");
-var searchCityURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb"
+var searchCityURL = "http://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb"
 var searchHistory = [];
 var j = 0;
 
@@ -52,7 +52,7 @@ $.ajax({
     //call for current UV index using current latitude and longitude
     currentLat = response.coord.lat
     currentLong = response.coord.lon
-    var UVqueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=be3ec8db9db08c35a36bef393013c2cb&lat=" + currentLat + "&lon=" + currentLong;
+    var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=be3ec8db9db08c35a36bef393013c2cb&lat=" + currentLat + "&lon=" + currentLong;
 
     //Use the last ajax call's coordinates to call for the UV data for that city
     $.ajax({
@@ -84,7 +84,7 @@ $.ajax({
     })
         
     //using the past searched city, call for the 5 day forecast
-    var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb";
+    var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb";
 
     $.ajax({
         url: forecastURL,
@@ -123,7 +123,7 @@ $("#searchcityform").on("submit", function(event){
     event.preventDefault();
     var searchCity = $("#searchcityform input").val();
     console.log(searchCity)
-    var searchCityURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb"
+    var searchCityURL = "http://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb"
 
     $.ajax({
         url: searchCityURL,
@@ -155,7 +155,7 @@ $("#searchcityform").on("submit", function(event){
         //call for current UV index using current latitude and longitude
         currentLat = response.coord.lat
         currentLong = response.coord.lon
-        var UVqueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=be3ec8db9db08c35a36bef393013c2cb&lat=" + currentLat + "&lon=" + currentLong;
+        var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=be3ec8db9db08c35a36bef393013c2cb&lat=" + currentLat + "&lon=" + currentLong;
  
         $.ajax({
             url: UVqueryURL,
@@ -185,7 +185,7 @@ $("#searchcityform").on("submit", function(event){
 
         })
         
-        var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb";
+        var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb";
 
         $.ajax({
             url: forecastURL,
@@ -236,7 +236,7 @@ $(".history").on("click", function(){
 
     var searchCity = $(this).attr("data-name");
     console.log(searchCity);
-    var searchCityURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb"
+    var searchCityURL = "http://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb"
 
     $.ajax({
         url: searchCityURL,
@@ -268,7 +268,7 @@ $(".history").on("click", function(){
         //call for current UV index using current latitude and longitude
         currentLat = response.coord.lat
         currentLong = response.coord.lon
-        var UVqueryURL = "https://api.openweathermap.org/data/2.5/uvi?appid=be3ec8db9db08c35a36bef393013c2cb&lat=" + currentLat + "&lon=" + currentLong;
+        var UVqueryURL = "http://api.openweathermap.org/data/2.5/uvi?appid=be3ec8db9db08c35a36bef393013c2cb&lat=" + currentLat + "&lon=" + currentLong;
  
         $.ajax({
             url: UVqueryURL,
@@ -298,7 +298,7 @@ $(".history").on("click", function(){
 
         })
         
-        var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb";
+        var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "&appid=be3ec8db9db08c35a36bef393013c2cb";
 
         $.ajax({
             url: forecastURL,
